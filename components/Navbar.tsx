@@ -21,7 +21,7 @@ const Navbar = async () => {
           {session && session?.user ? (
             <>
               <Link href="/startup/create">
-                <span className="max-sm:hidden text-white-100">Create</span>
+                <span className="max-sm:hidden text-white-100">Creează</span>
                 <BadgePlus className="size-6 sm:hidden" />
               </Link>
 
@@ -33,7 +33,7 @@ const Navbar = async () => {
                 }}
               >
                 <button type="submit">
-                  <span className="max-sm:hidden text-white-100">Logout</span>
+                  <span className="max-sm:hidden text-white-100">Deconectare</span>
                   <LogOut className="size-6 sm:hidden text-red-500" />
                 </button>
               </form>
@@ -55,7 +55,7 @@ const Navbar = async () => {
                 await signIn("google");
               }}
             >
-              <button className="text-black-100" type="submit">Login</button>
+              <button className="text-black-100" type="submit">Autentificare</button>
             </form>
           )}
         </div>

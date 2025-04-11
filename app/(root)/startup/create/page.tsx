@@ -23,7 +23,7 @@ const Page = async () => {
       <br/>
       <div className="bg-white p-4 w-fit mx-auto" style={{borderRadius : 16}}>
         <section className="pink_container !min-h-[230px] ">
-          <h1 className="heading">Share your memory</h1>
+          <h1 className="heading">Împărtășește-ți amintirea</h1>
         </section>
 
         <StartupForm />

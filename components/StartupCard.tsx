@@ -51,7 +51,7 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
           <h3 className="text-30-semibold line-clamp-1 ">{title}</h3>
         </Link>
         <Button className="startup-card_btn uppercase border-[3px] group-hover:border-white/80 transition border-black group-hover:bg-primary transition bg-black group-hover:text-white/80 transition text-black" asChild>
-          <Link href={`/startup/${_id}`}>Details</Link>
+          <Link href={`/startup/${_id}`}>Detalii</Link>
         </Button>
       </div>
         <br />

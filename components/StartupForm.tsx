@@ -35,7 +35,7 @@ const StartupForm = () => {
       if (result.status == "SUCCESS") {
         toast({
           title: "Success",
-          description: "Your startup pitch has been created successfully",
+          description: "Amintirea ta a fost încărcată cu succes!",
         });
 
         router.push(`/startup/${result._id}`);
@@ -50,7 +50,7 @@ const StartupForm = () => {
 
         toast({
           title: "Error",
-          description: "Please check your inputs and try again",
+          description: "Verifică datele introduse și încearcă din nou",
           variant: "destructive",
         });
 
@@ -59,13 +59,13 @@ const StartupForm = () => {
 
       toast({
         title: "Error",
-        description: "An unexpected error has occurred",
+        description: "A apărut o eroare neașteptată",
         variant: "destructive",
       });
 
       return {
         ...prevState,
-        error: "An unexpected error has occurred",
+        error: "A apărut o eroare neașteptată",
         status: "ERROR",
       };
     }
@@ -80,14 +80,14 @@ const StartupForm = () => {
       <form action={formAction} className="startup-form">
         <div>
           <label htmlFor="title" className="startup-form_label">
-            Title
+            Titlu
           </label>
           <Input
             id="title"
             name="title"
             className="startup-form_input"
             required
-            placeholder="Startup Title"
+            placeholder="Titlul amintirii"
           />
 
           {errors.title && <p className="startup-form_error">{errors.title}</p>}
@@ -95,14 +95,14 @@ const StartupForm = () => {
 
         <div>
           <label htmlFor="description" className="startup-form_label">
-            Description
+            Descriere
           </label>
           <Textarea
             id="description"
             name="description"
             className="startup-form_textarea"
             required
-            placeholder="Startup Description"
+            placeholder="Descrierea amintirii"
           />
 
           {errors.description && (
@@ -112,14 +112,14 @@ const StartupForm = () => {
 
         <div>
           <label htmlFor="category" className="startup-form_label">
-            Category
+            Categorie
           </label>
           <Input
             id="category"
             name="category"
             className="startup-form_input"
             required
-            placeholder="Startup Category (Tech, Health, Education...)"
+            placeholder="Categoria amintirii(bunici, familie...)"
           />
 
           {errors.category && (
@@ -129,14 +129,14 @@ const StartupForm = () => {
 
         <div>
           <label htmlFor="link" className="startup-form_label">
-            Image URL
+            URL-ul imaginii
           </label>
           <Input
             id="link"
             name="link"
             className="startup-form_input"
             required
-            placeholder="Startup Image URL"
+            placeholder="URL-ul imaginii"
           />
 
           {errors.link && <p className="startup-form_error">{errors.link}</p>}
@@ -144,7 +144,7 @@ const StartupForm = () => {
 
         <div data-color-mode="light">
           <label htmlFor="pitch" className="startup-form_label">
-            Pitch
+            Conținut
           </label>
 
           <MDEditor
@@ -156,7 +156,7 @@ const StartupForm = () => {
             style={{ borderRadius: 20, overflow: "hidden" }}
             textareaProps={{
               placeholder:
-                "Briefly describe your idea and what problem it solves",
+                "Descrie mai detaliat amintirea",
             }}
             previewOptions={{
               disallowedElements: ["style"],
@@ -171,7 +171,7 @@ const StartupForm = () => {
           className="startup-form_btn text-white"
           disabled={isPending}
         >
-          {isPending ? "Submitting..." : "Submit Your Pitch"}
+          {isPending ? "Submitting..." : "Postează-ți amintirea"}
           <Send className="size-6 ml-2" />
         </Button>
       </form>
